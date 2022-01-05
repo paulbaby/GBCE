@@ -269,6 +269,9 @@ class StockCalculations:
                 total_volume_weight *= volume_weight
                 stock_count += 1
 
+        if not stock_count:
+            return 0
+        
         geometric_mean = total_volume_weight ** (1 / stock_count)
 
         return geometric_mean
